@@ -1,0 +1,11 @@
+/home/jihoonlee/rustos/rustos/target/rustos/debug/deps/futures_core-74ed4a026efbc51c.rmeta: /home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/lib.rs /home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/future.rs /home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/stream.rs /home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/task/mod.rs /home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/task/poll.rs /home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/task/__internal/mod.rs /home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/task/__internal/atomic_waker.rs
+
+/home/jihoonlee/rustos/rustos/target/rustos/debug/deps/futures_core-74ed4a026efbc51c.d: /home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/lib.rs /home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/future.rs /home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/stream.rs /home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/task/mod.rs /home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/task/poll.rs /home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/task/__internal/mod.rs /home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/task/__internal/atomic_waker.rs
+
+/home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/lib.rs:
+/home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/future.rs:
+/home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/stream.rs:
+/home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/task/mod.rs:
+/home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/task/poll.rs:
+/home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/task/__internal/mod.rs:
+/home/jihoonlee/.cargo/registry/src/github.com-1ecc6299db9ec823/futures-core-0.3.23/src/task/__internal/atomic_waker.rs:
