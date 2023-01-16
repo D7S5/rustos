@@ -81,7 +81,17 @@ use core::ptr;
 
 unsafe impl GlobalAlloc for Locked<LinkedListAllocator> {
     unsafe fn alloc(&self, layout : Layout) -> *mut u8 {
-        let ( size, allign) = LinkedListAllocator::size_align(layout)
+        let ( size, align) = LinkedListAllocator::size_align(layout)
+        let mut allocator = self.lock();
+    
+        if let Some((region , alloc_start)) = allocator.find_region(self)
+            let alloc_end = alloc_start.checked_add(size).expect("overflow")
+            
+            if excess_size > 0 {
+                allocator.add_free_region(alloc_end, excess_size);
+            }
+            alloc_start as *mut u8
     }
+
     
 }
