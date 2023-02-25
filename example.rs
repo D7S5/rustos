@@ -64,6 +64,21 @@ unsafe impl GlobalAlloc for Locked<FixedSizeBlockAllocator> {
                     }
                 }
             }
+            None => allocator.fallback_alloc(layout);
         }
     }
+unsafe fn dealloc(&self, ptr : *mut u8, layout : Layout) {
+    let mut allocator = self.lock();
+
+    match list_index(&layout) {
+        Some(index ) => {
+            let new_node = ListNode {
+                next : allcator.list_heads[index].take(),
+                
+            }
+        }
+    }
+
+
+}
 }
