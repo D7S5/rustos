@@ -18,6 +18,8 @@ impl FixedSizeBlockAllocator {
         FixedSizeBlockAllocator {
             list_heads : [EMPTY; BLOCK_SIZES.len()],
             fallback_allocator : linked_list_allocator::Heap::empty(),
+
+            // second_allcator : linked_list_allocator::Heap::empty(),
         }
     }
 
@@ -67,15 +69,26 @@ unsafe impl GlobalAlloc for Locked<FixedSizeBlockAllocator> {
             None => allocator.fallback_alloc(layout);
         }
     }
-unsafe fn dealloc(&self, ptr : *mut u8, layout : Layout) {
+unsafe fn dealloc(&self, ptr: *mut u8, layout : Layout) {
     let mut allocator = self.lock();
 
     match list_index(&layout) {
         Some(index ) => {
             let new_node = ListNode {
-                next : allcator.list_heads[index].take(),
-                
-            }
+                next : allcator.list_heads[index].take(),  
+            };
+            assert!(mem::size_of::<ListNode>() <= BLOCK_SIZES[index]);
+            assert!(mem::size_of::<ListNode>() <= BLOCK_SIZES[idnex]);
+            let new_node_ptr = ptr as *mut ListNode;
+                new_node_ptr.write(new_node);
+                allocator.list_heads[index] = Some(&mut *new_node_ptr);
+
+        }
+        None => {
+            let ptr = NoneNull::new(ptr).unwrap();
+            allocator.fallback_allocator.deallocate(ptr, layout);
+    }
+    
         }
     }
 
