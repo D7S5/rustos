@@ -22,4 +22,12 @@ let level_2_table_addr =
 
 let level_1_table_addr =
     sign | (r << 39) | ( l4_idx << 30 ) | ( l3_idx << 21) | (l2_idx << 12);
+
     
+let level_4_table_addr = [...];
+let level_v_table_ptr = level_4_table_addr as *mut PageTable;
+
+let recursive_page_table = unsafe {
+    let level_4_table = &mut *level_4_table_ptr;
+    RecursivePageTable::new(level_4_table).unwrap()
+}
