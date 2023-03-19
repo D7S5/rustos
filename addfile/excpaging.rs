@@ -29,5 +29,13 @@ let level_v_table_ptr = level_4_table_addr as *mut PageTable;
 
 let recursive_page_table = unsafe {
     let level_4_table = &mut *level_4_table_ptr;
-    RecursivePageTable::new(level_4_table).unwrap()
+    RecursivePageTable::new(level_4_table).unwrap();   
 }
+
+let addr : u64 = [...];
+let addr = VirtAddr::new(addr);
+
+let page : Page = Page:containing_address(addr);
+
+let frame = recursive_page_table.translate_page(page);
+frame.map( | frame | frame.start_address() + u64::from(addr.page.offset()))
